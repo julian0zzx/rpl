@@ -1,0 +1,1 @@
+/Users/mac/Documents/RustDemo/chapter11_test/target/debug/fns_test-67ce648ab9af5103: /Users/mac/Documents/RustDemo/chapter11_test/src/fns.rs /Users/mac/Documents/RustDemo/chapter11_test/src/main.rs /Users/mac/Documents/RustDemo/chapter11_test/tests/fns_test.rs

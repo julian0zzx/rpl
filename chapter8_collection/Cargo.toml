@@ -1,0 +1,7 @@
+[package]
+name = "chapter8_collection"
+version = "0.1.0"
+authors = ["ju"]
+edition = "2018"
+
+[dependencies]

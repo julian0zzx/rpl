@@ -1,0 +1,7 @@
+[package]
+name = "chptrtest"
+version = "0.1.0"
+authors = ["julian0zzx <julian0zzx@gmail.com>"]
+edition = "2018"
+
+[dependencies]
