@@ -1,2 +1,2 @@
 # rpl
-code of The Rust Programming Language
+Code of The Rust Programming Language
