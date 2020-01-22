@@ -1,1 +1,0 @@
-/Users/mac/Documents/RustDemo/chapter11_test/target/debug/chapter11_test-f3c00ae1e8784a37.dSYM: /Users/mac/Documents/RustDemo/chapter11_test/src/fns.rs /Users/mac/Documents/RustDemo/chapter11_test/src/main.rs
