@@ -9,8 +9,8 @@ use std::time::Duration;
 extern crate chapter20;
 
 fn main() {
-    // single_thread_server();
-    multi_thread_server();
+    single_thread_server();
+    // multi_thread_server();
 }
 
 // st_
@@ -32,6 +32,7 @@ fn st_handle_connection(mut strm : TcpStream) {
     if buf.starts_with(b"GET / HTTP/1.1\r\n") {
         let contents = fs::read_to_string("index.htm").unwrap();
         resp = format!("HTTP/1.1 200 OK \r\n\r\n {}", contents);
+        // resp = format!("HTTP/1.1 200 OK \r\n\r\n {}", "contents");
     } else if buf.starts_with(b"GET /sleep HTTP/1.1\r\n") {
         thread::sleep(Duration::from_secs(3));
         resp = String::from("HTTP/1.1 200 OK\r\n\r\n <html><body><h1>Rust, sleep 3 seconds.</h1></body></html>");
@@ -39,8 +40,8 @@ fn st_handle_connection(mut strm : TcpStream) {
         // POST doesn't work
         resp = String::from("HTTP/1.1 201 Created\r\n\r\n 
         Location:http://localhost:7890/\r\n\r\n 
-        <head><title>Rust Http Server POST 0.1</title></head>
-        <body><h1>Rust, Not a Get</h1></body>");
+        <html><head><title>Rust Http Server POST 0.1</title></head>
+        <body><h1>Rust, Not a Get</h1></body></html>");
     } else {
         resp = String::from("HTTP/1.1 200 OK\r\n\r\n <html><head><title>Rust Http Server 0.1</title></head><body><h1>Rust, Not a Get</h1></body></html>");
     }
